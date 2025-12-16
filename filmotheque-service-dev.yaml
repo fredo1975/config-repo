@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: filmotheque-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8061/eureka/
+  instance:
+    prefer-ip-address: true
+
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8061/eureka/
+  instance:
+    prefer-ip-address: true
+    hostname: filmotheque-service
