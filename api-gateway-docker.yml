@@ -25,17 +25,3 @@ management:
     web:
       exposure:
         include: health,info,gateway
-
----
-spring:
-  config:
-    activate:
-      on-profile: docker
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka-server:8761/eureka/
-  instance:
-    prefer-ip-address: true
-    hostname: api-gateway
