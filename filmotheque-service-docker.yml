@@ -1,0 +1,12 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/filmdb
+    username: admin
+    password: admin123
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8061/eureka/
+  instance:
+    prefer-ip-address: true
