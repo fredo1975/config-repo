@@ -3,7 +3,10 @@ spring:
     url: r2dbc:postgresql://localhost:5432/filmdb
     username: admin
     password: admin123
-
+  pool:
+    initial-size: 10
+    max-size: 20
+    max-idle-time: 30m
 eureka:
   client:
     service-url:
