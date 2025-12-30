@@ -12,6 +12,10 @@ spring:
             - Path=/api/films/**
           filters:
             - StripPrefix=0
+        - id: filmotheque-tmdb-service
+          uri: lb://filmotheque-tmdb-service
+          predicates:
+            - Path=/api/tmdb/**
 
 eureka:
   client:
