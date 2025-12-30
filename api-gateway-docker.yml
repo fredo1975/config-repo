@@ -6,7 +6,7 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: product-service
+        - id: filmotheque-service
           uri: lb://filmotheque-service
           predicates:
             - Path=/api/films/**
